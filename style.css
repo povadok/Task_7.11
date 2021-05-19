@@ -119,6 +119,16 @@
         background-color: rgb(48, 56, 83);
     }
 
+    .section-content {
+        padding: 400px 100px;
+        border: 1px solid black;
+    }
+
+    .back {
+        margin-left: 50px;
+        font-size: 16px;
+    }
+
     @media screen and (max-width: 1250px) {
         .description {
             margin-bottom: 70px;
@@ -131,6 +141,93 @@
             padding-left: 20px;
         }
     }
+
+    .mobile-container {
+        opacity: 0;
+        visibility: hidden;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 12;
+        background-color: rgba(0, 0, 0, 0.8);
+        transition: all 0.8s ease 0s;
+    }
+
+    .mobile-container:target {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .popup__area {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    .header-mobile {
+        position: absolute;
+        left:  50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 310px;
+        height: 380px;
+        background-color: rgba(79, 128, 192);
+        border: 1px solid grey;
+        border-radius: 10px;
+        overflow: auto;
+        font-size: 14px;        
+    }
+
+    .close-icon {
+        width: 18px;
+        padding-top: 12px;
+    }
+
+    .close-icon span {
+        position: absolute;
+        top: 20px;
+        left: 270px;
+        display: block;
+        height: 1px;
+        width: 20px;
+        background: yellow;
+    }
+
+    .close-icon span:first-child {transform: rotate(45deg);}
+    .close-icon span:last-child {transform: rotate(-45deg);}
+
+    .mobile-list {
+        padding-left: 25px;
+        margin-top: 0px;
+        padding-top: 65px;
+        list-style-type: none;
+        padding-left: 0;
+        font-size: 18px;
+    }
+
+    .mobile-list li {
+        text-align: center;
+        padding-bottom: 10px;
+        letter-spacing: -0.36px;
+        padding-top:  9px;
+        margin: 0 auto;
+        border-bottom: 1px solid lightslategray;
+        width: 120px;
+        text-transform: uppercase;
+    }
+
+    .mobile-list a {
+        text-decoration: none;
+        color: white;
+        outline: none;
+        
+    }
+
+    .mobile-list a:hover {color: tomato;}
 
     @media screen and (max-width: 906px) {
         .logo {padding-left: 0;}
