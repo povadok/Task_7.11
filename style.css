@@ -10,6 +10,11 @@
         background-color: #EEEFF1;
     }
 
+    .header {
+        position: fixed;
+        width: 100%;
+    }
+
     .fixed-container {
         box-sizing: border-box;
         margin: 0 auto;
@@ -300,6 +305,42 @@
 
     .decoration img {width: 100%;}
 
+    .decoration a { 
+        display: block; 
+        position: relative; }
+
+    .decoration a:after { 
+        content: ''; 
+        position: absolute; 
+        top: 0; 
+        left: 0; 
+        right: 0; 
+        bottom: 0; 
+        background: rgba(52,84,122,.8);  
+        opacity: 0; }
+
+    .decoration a:before { 
+        content: ''; 
+        position: absolute; 
+        top: 0; 
+        left: 0; 
+        right: 0; 
+        bottom: 0; 
+        background: url(image/view.png) no-repeat;
+        background-position: center;
+        /* background: no-repeat; */
+        /* background: url(image/view.png); 
+        object-fit: scale-down; */
+        z-index: 10;
+        opacity: 0; }
+
+    .decoration a:hover:before,
+
+    .decoration a:hover:after { opacity: 1; }
+
+    .microsoft li {
+        list-style-type: none;
+    }
     
 
     .microsoft-links {
@@ -317,9 +358,11 @@
 
     #contacts {
         background-color: #EEEFF1;
+        padding-top: 142px;
     }
 
     .contacts {   
+        padding-bottom: 100px;
         height: auto;
         display: flex;
         flex-direction: column;
@@ -355,19 +398,22 @@
     .form-fline {
         display: flex;
         justify-content: space-between;
+        margin-top: 92px;
     }
 
-    .form-fline input {
+    /* .form-fline textarea {
         width: 47%;
         height: 71.5px;
-    }
+    } */
 
-    .form-sline input {
+
+
+    /* .form-sline input {
         width: 100%;
         height: 249px;
         margin-top: 28.56px;
         margin-bottom: 72px;
-    }
+    } */
 
     input, textarea {
         outline: none;
@@ -375,7 +421,39 @@
         border: solid 1px #f2f2f2;
         }
 
-        
+    .form-fline textarea {
+        resize: none;
+        overflow: auto;
+        padding: 24px 20px;
+        width: 47%;
+        height: 30px;
+        font-size: 14px;
+    }
+
+    #formmail {
+        margin-left: 30px;
+    }
+
+    .form-sline textarea {
+        box-sizing: border-box;
+        resize: none;
+        overflow: auto;
+        padding: 24px 20px;
+        width: 100%;
+        height: 249px;
+        margin-top: 28.56px;
+        margin-bottom: 72px;
+        font-size: 14px;
+     }
+
+    .formcontacts .buttons {
+        display: flex;
+        justify-content: center;
+    }
+
+     /* #masage {
+         width: 100%;
+     } */
 
     .back {
         margin-left: 50px;
@@ -548,9 +626,13 @@
         color: tomato;
     }
 
-    @media screen and (max-width: 906px) {
+    @media screen and (max-width: 1005px) {
         .logo {
             padding-left: 0;
+        }
+
+        .logo-pict {
+            width: 50px;
         }
 
         .header-menu {
@@ -574,6 +656,7 @@
         .laptop {
             margin: 0 auto;
             padding: 0;
+            padding-top: 50px;
             text-align: center;
         }
 
